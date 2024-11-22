@@ -8,19 +8,8 @@
         </svg>
       </button>
     </a>
-    <div class="flex flex-col flex-1 gap-4 justify-end mb-8">
-      <!-- <div class="chat w-full flex-col"
-        :class="{ 'chat-end': message.username == username, 'chat-start': message.username != username , 'self-end': message.username == username }"
-        v-for="message in messages" :key="message.key">
-        <div :class="{ 'chat-end': message.username == username, 'chat-start': message.username != username }">
-          {{ message.username }}
-        </div>
-        <div class="chat-bubble text-slate-50 bg-emerald-400 text-wrap"
-          :class="{ 'bg-emerald-800': message.username == username }">
-          {{ message.content }}
-        </div>
-      </div> -->
-      <div class="w-fit  max-w-3/4 text-wrap flex flex-col" :class="{ 'self-end': message.username == username }"
+    <div class="flex flex-col h-full flex-1 p-4 gap-4 overflow-auto">
+      <div class="w-fit  max-w-3/4 text-wrap flex flex-col h-fit" :class="{ 'self-end': message.username == username }"
         v-for="message in messages" :key="message.key">
         <div :class="{ 'self-end': message.username == username }">
           {{ message.username }}
